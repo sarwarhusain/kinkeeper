@@ -4,6 +4,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 import { ToastContainer } from "react-toastify";
+import TimeLineContextProvider from "@/context/timeline.context";
+import Providers from "./lib/providers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,13 +30,14 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="">
-        <Navbar />
         <main className="flex-1">
-          <Container>{children}</Container>
-          <ToastContainer />
+          <Navbar />
+          <Providers>
+            <Container>{children}</Container>
+            <ToastContainer />
+          </Providers>
+          <Footer />
         </main>
-
-        <Footer />
       </body>
     </html>
   );

@@ -9,7 +9,7 @@ export default async function Home() {
   return (
     <div className="">
       <Banner />
-      <Suspense fallback="Stat...">
+      <Suspense fallback="Loading Stat">
         <Stat data={data} />
       </Suspense>
 

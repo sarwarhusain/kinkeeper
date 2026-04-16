@@ -1,12 +1,17 @@
+import TimeLine from "@/components/TimeLine";
 import Image from "next/image";
-import Link from "next/link";
+
+const userPromise = async function () {
+  const res = await fetch("http://localhost:3000/UsersData.json");
+  const data = await res.json();
+  return data;
+};
 
 const DetailsPage = async ({ params }) => {
+  const userDetails = await userPromise();
   const { userId } = await params;
-  const res = await fetch("http://localhost:3000/UsersData.json");
-  const userDetails = await res.json();
 
-  const user = userDetails.find((user) => user.id === parseInt(userId));
+  const user = userDetails.find((userData) => userData.id === parseInt(userId));
 
   // console.log(user);
 
@@ -31,9 +36,7 @@ const DetailsPage = async ({ params }) => {
               </div>
 
               <h2 className="text-lg font-semibold mt-2">{user.name}</h2>
-
               <span className="badge badge-error mt-1">{user.status}</span>
-
               <p className="text-sm text-gray-500 mt-2">{user.bio}</p>
 
               <div className="mt-4 flex flex-col gap-2">
@@ -82,17 +85,7 @@ const DetailsPage = async ({ params }) => {
           </div>
 
           {/* Quick Actions */}
-          <div className="mt-6">
-            <h3 className="font-semibold mb-2">Quick Check-in</h3>
-
-            <div className="grid grid-cols-3 gap-3">
-              <Link href="/timeLine" className="btn">
-                📞 Call
-              </Link>
-              <button className="btn">💬 Text</button>
-              <button className="btn">🎥 Video</button>
-            </div>
-          </div>
+          <TimeLine></TimeLine>
         </div>
       </div>
     </div>

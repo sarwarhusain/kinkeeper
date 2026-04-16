@@ -6,9 +6,7 @@ import { toast } from "react-toastify";
 
 const User = ({ user }) => {
   const { id, name, img, tags, status } = user;
-
   const handleClicked = () => {
-    console.log("clicked");
     toast.success("Added Successfully");
   };
   return (
