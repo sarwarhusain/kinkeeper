@@ -6,6 +6,7 @@ const TimeLineContextProvider = ({ children }) => {
   const [timeLine, setTimeLine] = useState([]);
   const data = {
     timeLine,
+    // timeline
     setTimeLine,
   };
   return (
