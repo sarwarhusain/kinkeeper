@@ -8,7 +8,7 @@ const geist = Geist({
 
 const Banner = () => {
   return (
-    <div className={`${geist.className} text-center space-y-2`}>
+    <div className={`${geist.className} text-center my-10 space-y-3`}>
       <h2 className="font-bold text-3xl">Friends to keep close in your life</h2>
       <p className="">
         Your personal shelf of meaningful connections. Browse, tend, and nurture

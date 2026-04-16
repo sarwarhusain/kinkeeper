@@ -1,10 +1,10 @@
-import React from "react";
+const Stat = ({ data }) => {
+  // console.log("userPromise", data);
 
-const Stat = () => {
   return (
     <div className="stats stats-vertical lg:stats-horizontal grid grid-cols-2 lg:grid-cols-4 justify-between gap-5 my-5 ">
       <div className="stat text-center bg-base-100 rounded-2xl">
-        <h2 className="font-bold">10</h2>
+        <h2 className="font-bold">{data.length}</h2>
         <p className="">Total Friend</p>
       </div>
 
