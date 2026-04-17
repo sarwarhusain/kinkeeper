@@ -1,5 +1,6 @@
 "use client";
 import { TimeLineContext } from "@/context/timeline.context";
+import Link from "next/link";
 import { useContext, useState } from "react";
 
 const DetailTimeLine = () => {
@@ -13,7 +14,7 @@ const DetailTimeLine = () => {
   } else if (sort === "days") {
     sortedData.sort((a, b) => a.contact - b.contact);
   }
-  console.log("sorted data",sortedData);
+  console.log("sorted data", sortedData);
   return (
     <div className=" gap-4 p-4 bg-base-100 rounded-xl shadow-sm hover:shadow-md transition w-full max-w-7xl mx-auto">
       <div className="dropdown dropdown-center">
@@ -33,7 +34,19 @@ const DetailTimeLine = () => {
         </ul>
       </div>
       {sortedData.length === 0 ? (
-        <p>No activity yet</p>
+        <div className="min-h-screen flex justify-center items-center ">
+          <div className=" card bg-neutral text-neutral-content w-96">
+            <div className="card-body items-center text-center">
+              <h2 className="card-title">The TimeLine is Empty!</h2>
+              <p>We are using cookies for no reason.</p>
+              <div className="card-actions justify-end">
+                <Link href={"/"} className="btn bg-[#244D3F] text-white">
+                  Home
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
       ) : (
         sortedData.map((user, idx) => (
           <div key={idx} className=" ">

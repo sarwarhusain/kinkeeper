@@ -12,7 +12,6 @@ export default async function Home() {
       <Suspense fallback="Loading Stat">
         <Stat data={data} />
       </Suspense>
-
       <Users />
     </div>
   );

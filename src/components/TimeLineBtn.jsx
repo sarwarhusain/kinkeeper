@@ -23,6 +23,8 @@ const TimeLineBtn = ({ user }) => {
       date: new Date().toLocaleDateString("en-GB"),
       contact: user.days_since_contact,
       target: user.goal,
+      img: user.img,
+      names: user.name,
     };
     setTimeLine([...timeLine, newData]);
     toast.success(`The ${user.name} added details`);
