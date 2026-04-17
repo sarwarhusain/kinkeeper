@@ -6,12 +6,13 @@ const TimeLineContextProvider = ({ children }) => {
   const [timeLine, setTimeLine] = useState([]);
   const data = {
     timeLine,
-    // timeline
     setTimeLine,
   };
   return (
     <div>
-      <TimeLineContext value={data}>{children}</TimeLineContext>
+      <TimeLineContext.Provider value={data}>
+        {children}
+      </TimeLineContext.Provider>
     </div>
   );
 };

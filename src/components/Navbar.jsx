@@ -22,7 +22,10 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link className={`btn text-black ${path === "/users"} `} href="">
+        <Link
+          className={`btn text-black ${path === "/timeline" ? "bg-[#244D3F] text-white" : ""} `}
+          href="/timeline"
+        >
           <CiTimer /> TimeLine
         </Link>
       </li>

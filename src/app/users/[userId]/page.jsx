@@ -1,4 +1,4 @@
-import TimeLine from "@/components/TimeLine";
+import TimeLineBtn from "@/components/TimeLineBtn";
 import Image from "next/image";
 
 const userPromise = async function () {
@@ -85,7 +85,7 @@ const DetailsPage = async ({ params }) => {
           </div>
 
           {/* Quick Actions */}
-          <TimeLine></TimeLine>
+          <TimeLineBtn user={user}></TimeLineBtn>
         </div>
       </div>
     </div>
