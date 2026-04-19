@@ -30,11 +30,11 @@ const Chart = () => {
   // console.log(data);
 
   return (
-    <div className="">
+    <div className="my-10">
       <div className="shadow-sm">
         <h2 className="font-bold text-3xl">Friendship Analytics</h2>
       </div>
-      <div className="md:px-100 shadow-2xl mt-5 w-full h-[500px]">
+      <div className="md:px-80 shadow-2xl mt-5 w-full h-[500px]">
         {timeLine.length === 0 ? (
           <div className="mx-auto border-accent shadow m-20 p-10 text-center">
             <div className="flex items-center justify-center">

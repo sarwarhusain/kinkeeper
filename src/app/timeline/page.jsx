@@ -16,14 +16,14 @@ const DetailTimeLine = () => {
   }
   console.log("sorted data", sortedData);
   return (
-    <div className="gap-4 p-4 bg-base-100 rounded-xl shadow-sm hover:shadow-md transition w-full max-w-7xl mx-auto">
+    <div className="gap-4 p-4 bg-base-100 rounded-xl shadow-2xl hover:shadow-md transition w-full max-w-7xl mx-auto">
       <div className="dropdown dropdown-center">
         <div tabIndex={0} role="button" className="btn m-1">
           Timeline
         </div>
         <ul
           tabIndex="-1"
-          className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+          className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 "
         >
           <li onClick={() => setSort("goals")}>
             <a>Sort by Goal</a>
@@ -34,7 +34,7 @@ const DetailTimeLine = () => {
         </ul>
       </div>
       {sortedData.length === 0 ? (
-        <div className=" flex justify-center items-center ">
+        <div className="mx-auto m-20 p-10 text-center flex justify-center items-center ">
           <div className=" card bg-neutral text-neutral-content w-96">
             <div className="card-body items-center text-center">
               <h2 className="card-title">The TimeLine is Empty!</h2>

@@ -1,6 +1,4 @@
 const Stat = ({ data }) => {
-  // console.log("userPromise", data);
-
   return (
     <div className="stats stats-vertical lg:stats-horizontal grid grid-cols-2 lg:grid-cols-4 justify-between gap-5 my-5 ">
       <div className="stat text-center bg-base-100 rounded-2xl">

@@ -36,7 +36,7 @@ const User = ({ user }) => {
             ))}
           </div>
           <button
-            className={`btn rounded-full ${user.status === "Overdue" ? "bg-red-500" : user.status === "Almost Due" ? "bg-yellow-500" : user.status === "On-Track" ? "bg-green-700 text-white" : ""} `}
+            className={`btn rounded-full ${user.status === "Overdue" ? "bg-red-500" : user.status === "AlmostDue" ? "bg-yellow-500" : user.status === "OnTrack" ? "bg-green-700 text-white" : ""} `}
           >
             {user.status}
           </button>
