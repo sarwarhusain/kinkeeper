@@ -2,7 +2,9 @@ import TimeLineBtn from "@/components/TimeLineBtn";
 import Image from "next/image";
 
 const userPromise = async function () {
-  const res = await fetch("http://localhost:3000/UsersData.json");
+  const res = await fetch("https://kinkeeper-one.vercel.app/UsersData.json", {
+    cache: "no-store",
+  });
   const data = await res.json();
   return data;
 };

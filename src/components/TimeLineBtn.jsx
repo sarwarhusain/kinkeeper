@@ -12,7 +12,7 @@ const icons = {
 
 const TimeLineBtn = ({ user }) => {
   const { timeLine, setTimeLine } = useContext(TimeLineContext);
-  console.log(timeLine, "timelineContext");
+  // console.log(timeLine, "timelineContext");
 
   const handleCallPhoneMsg = (type) => {
     // console.log("clicked call");
@@ -29,7 +29,7 @@ const TimeLineBtn = ({ user }) => {
       contact: user.days_since_contact,
       target: user.goal,
       img: user.img,
-      names: user.name,
+      name: user.name,
       status: user.status,
     };
     setTimeLine([...timeLine, newData]);

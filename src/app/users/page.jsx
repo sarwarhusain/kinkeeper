@@ -1,7 +1,9 @@
 import User from "@/components/User";
 
 const Users = async () => {
-  const res = await fetch("http://localhost:3000/UsersData.json");
+  const res = await fetch("https://kinkeeper-one.vercel.app/UsersData.json",{
+    cache:'no-store'
+  })
   const users = await res.json();
   // console.log(users);
   return (
