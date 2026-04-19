@@ -16,18 +16,24 @@ const TimeLineBtn = ({ user }) => {
 
   const handleCallPhoneMsg = (type) => {
     // console.log("clicked call");
+    toast.success(`${type} with Alex Johnson`);
     const newData = {
       type,
       icon: icons[type],
       name: user.name,
-      date: new Date().toLocaleDateString("en-GB"),
+      date: new Date().toLocaleDateString("en-us", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }),
       contact: user.days_since_contact,
       target: user.goal,
       img: user.img,
       names: user.name,
+      status: user.status,
     };
     setTimeLine([...timeLine, newData]);
-    toast.success(`The ${user.name} added details`);
+    // toast.success(`The ${user.name} added details`);
   };
   return (
     <div className="mt-6">

@@ -16,7 +16,7 @@ const DetailTimeLine = () => {
   }
   console.log("sorted data", sortedData);
   return (
-    <div className=" gap-4 p-4 bg-base-100 rounded-xl shadow-sm hover:shadow-md transition w-full max-w-7xl mx-auto">
+    <div className="gap-4 p-4 bg-base-100 rounded-xl shadow-sm hover:shadow-md transition w-full max-w-7xl mx-auto">
       <div className="dropdown dropdown-center">
         <div tabIndex={0} role="button" className="btn m-1">
           Timeline
@@ -34,11 +34,11 @@ const DetailTimeLine = () => {
         </ul>
       </div>
       {sortedData.length === 0 ? (
-        <div className="min-h-screen flex justify-center items-center ">
+        <div className=" flex justify-center items-center ">
           <div className=" card bg-neutral text-neutral-content w-96">
             <div className="card-body items-center text-center">
               <h2 className="card-title">The TimeLine is Empty!</h2>
-              <p>We are using cookies for no reason.</p>
+              <p>There are no call,text and video history</p>
               <div className="card-actions justify-end">
                 <Link href={"/"} className="btn bg-[#244D3F] text-white">
                   Home
@@ -49,7 +49,7 @@ const DetailTimeLine = () => {
         </div>
       ) : (
         sortedData.map((user, idx) => (
-          <div key={idx} className=" ">
+          <div key={idx} className="">
             <div className="flex shadow-sm hover:shadow-md transition p-2 rounded-2xl items-center gap-2 m-3 ">
               <p className="text-3xl">{user.icon}</p>
               <div className="">

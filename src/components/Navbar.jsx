@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiTimer } from "react-icons/ci";
 import { FaHome } from "react-icons/fa";
+import { FaChartLine } from "react-icons/fa6";
 import { IoIosMenu } from "react-icons/io";
 // export const metadata: Metadata = {
 //   title: 'My Blog',
@@ -30,8 +31,11 @@ const Navbar = () => {
         </Link>
       </li>
       <li>
-        <Link className="btn text-black  " href="/">
-          Stat
+        <Link
+          className={`btn ${path === "/dashboard" ? "bg-[#244D3F] text-white" : ""} `}
+          href="/dashboard"
+        >
+          <FaChartLine /> Stats
         </Link>
       </li>
     </>

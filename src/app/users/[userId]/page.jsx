@@ -6,15 +6,18 @@ const userPromise = async function () {
   const data = await res.json();
   return data;
 };
+// Profile picture
+// Name
+// Status (with color)
+// Tags
+// Bio
+// Email
 
 const DetailsPage = async ({ params }) => {
   const userDetails = await userPromise();
   const { userId } = await params;
 
   const user = userDetails.find((userData) => userData.id === parseInt(userId));
-
-  // console.log(user);
-
   return (
     <div className="max-w-4xl mx-auto p-6">
       <div className="card bg-base-100 shadow-xl border">
@@ -37,7 +40,20 @@ const DetailsPage = async ({ params }) => {
 
               <h2 className="text-lg font-semibold mt-2">{user.name}</h2>
               <span className="badge badge-error mt-1">{user.status}</span>
+              <span>
+                <div className="flex mt-1 items-center gap-5">
+                  {user.tags.map((tag, idx) => (
+                    <button
+                      className="btn rounded-full bg-green-200 uppercase"
+                      key={idx}
+                    >
+                      {tag}
+                    </button>
+                  ))}
+                </div>
+              </span>
               <p className="text-sm text-gray-500 mt-2">{user.bio}</p>
+              <p>Email:{user.email}</p>
 
               <div className="mt-4 flex flex-col gap-2">
                 <button className="btn btn-sm">Snooze 2 Weeks</button>

@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       <body className="min-h-screen flex flex-col">
         <Providers>
           <Navbar />
-          <main className="flex-1">
+          <main className="flex-1 min-h-screen ">
             <Container>{children}</Container>
           </main>
           <ToastContainer />
