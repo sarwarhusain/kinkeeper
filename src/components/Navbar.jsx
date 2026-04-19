@@ -5,13 +5,10 @@ import { CiTimer } from "react-icons/ci";
 import { FaHome } from "react-icons/fa";
 import { FaChartLine } from "react-icons/fa6";
 import { IoIosMenu } from "react-icons/io";
-// export const metadata: Metadata = {
-//   title: 'My Blog',
-//   description: '...',
-// }
 
 const Navbar = () => {
   const path = usePathname();
+
   const links = (
     <>
       <li>

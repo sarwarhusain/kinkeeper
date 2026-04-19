@@ -4,9 +4,12 @@ export const TimeLineContext = createContext();
 
 const TimeLineContextProvider = ({ children }) => {
   const [timeLine, setTimeLine] = useState([]);
+  const [search, setSearch] = useState("");
   const data = {
     timeLine,
     setTimeLine,
+    search,
+    setSearch,
   };
   return (
     <div>
